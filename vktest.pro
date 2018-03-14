@@ -25,23 +25,39 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    model.cpp \
+    setup.cpp \
+    controller.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    model.h \
+    setup.h \
+    controller.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    setup.ui \
+    profile.ui
 
-#win32 {
-#    INCLUDEPATH += "D:/Projects/Build Output/include/"
 
-#    CONFIG(debug, debug|release) {
-#        LIBS += "D:/Projects/Build Output/libs/debug/myLib.lib"
-#        LIBS += "D:/Projects/Build Output/bin/x86 debug/myLib.dll"
-#    }
-#    else {
-#        LIBS += "D:/Projects/Build Output/libs/release/myLib.lib"
-#        LIBS += "D:/Projects/Build Output/bin/x86 release/myLib.dll"
-#    }
+
+#CONFIG(debug, debug|release) {
+
+#    DESTDIR         = $$OUT_PWD/Debug
+
+#}else {
+
+#    DESTDIR         = $$OUT_PWD/Release
+
 #}
+
+
+
+#QMAKE_POST_LINK += \
+#        $$QMAKE_COPY_DIR $$PWD/ssleay32.dll $$DESTDIR $$escape_expand(\\n)
+        #$$QMAKE_COPY_DIR $$PWD/libeay32.dll $$DESTDIR $$escape_expand(\\n)
+LIBS += \
+        "$$PWD/ssleay32.dll" \
+    "$$PWD/libeay32.dll"

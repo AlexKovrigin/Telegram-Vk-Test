@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>730</width>
+    <height>738</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <widget class="QPushButton" name="butGet">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
+      <x>650</x>
+      <y>680</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -27,15 +27,25 @@
      <string>Update</string>
     </property>
    </widget>
-   <widget class="QPlainTextEdit" name="txt">
+   <widget class="QTableWidget" name="table">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>50</y>
-      <width>361</width>
-      <height>191</height>
+      <y>10</y>
+      <width>711</width>
+      <height>661</height>
      </rect>
     </property>
+    <column>
+     <property name="text">
+      <string>Text</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Username</string>
+     </property>
+    </column>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -43,7 +53,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>400</width>
+     <width>730</width>
      <height>21</height>
     </rect>
    </property>
@@ -54,7 +64,6 @@
    </widget>
    <addaction name="menuMenu"/>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
